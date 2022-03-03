@@ -1,0 +1,68 @@
+// Greeting Card
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Card</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: ivory;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        $(function () {
+            var name = prompt("Enter Your name");
+            var dob = prompt("Enter date of Birth (dd-mm-yyyy)");
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "blue";
+            ctx.textAlign = "center";
+            ctx.font = "bold 20px cursive";
+            ctx.fillStyle = "green"
+            ctx.fillText(name, 230, 220);
+            ctx.fillStyle = "green"
+            ctx.fillText(`DOB ${dob}`, 230, 260);
+            var image = new Image();
+            image.src = "cake.jpeg";
+            image.addEventListener("load", function (evt) {
+                ctx.drawImage(evt.target, 0, 0, 500, 200);
+            });
+            var image1 = new Image();
+            image1.src = "rose.jpg";
+
+            image1.addEventListener("load", function (evt) {
+                ctx.drawImage(evt.target, 0, 250, 140, 250);
+
+            });
+            var image2 = new Image();
+            image2.src = "rose1.jpg";
+
+            image2.addEventListener("load", function (evt) {
+                ctx.drawImage(evt.target, 350, 250, 140, 250);
+            });
+            var image3 = new Image();
+            image3.src = "cake.jpeg";
+
+            image3.addEventListener("load", function (evt) {
+                ctx.drawImage(evt.target, 160, 300, 140, 200);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <canvas width="500" height="500" id="canvas"></canvas>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+
+// Draw star
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       canvas{
+            border: 1px solid green;
+        }   
+    </style>
+    </head>
+    
+    <body>
+    
+        <canvas width="300" height="300" id="myCanvas"></canvas><br /><br />
+        X-coordinate 1<input type="text" id="x1"><br><br>
+        Y-coordinate 1<input type="text" id="y1"><br><br>
+        X-coordinate 2<input type="text" id="x2"><br><br>
+        Y-coordinate 2<input type="text" id="y2"><br><br>
+        X-coordinate 3<input type="text" id="x3"><br><br>
+        Y-coordinate 3<input type="text" id="y3"><br><br>
+        X-coordinate 4<input type="text" id="x4"><br><br>
+        Y-coordinate 4<input type="text" id="y4"><br><br>
+        X-coordinate 5<input type="text" id="x5"><br><br>
+        Y-coordinate 5<input type="text" id="y5"><br><br>
+        X-coordinate 6<input type="text" id="x6"><br><br>
+        Y-coordinate 6<input type="text" id="y6"><br><br>
+        X-coordinate 7<input type="text" id="x7"><br><br>
+        Y-coordinate 7<input type="text" id="y7"><br><br>
+        X-coordinate 8<input type="text" id="x8"><br><br>
+        Y-coordinate 8<input type="text" id="y8"><br><br>
+        X-coordinate 9<input type="text" id="x9"><br><br>
+        Y-coordinate 9<input type="text" id="y9"><br><br>
+        X-coordinate 10<input type="text" id="x10"><br><br>
+        Y-coordinate 10<input type="text" id="y10"><br><br>
+        X-coordinate 11<input type="text" id="x11"><br><br>
+        Y-coordinate 11<input type="text" id="y11"><br><br>
+        <input type="button" value="draw" onclick="draw()">
+    
+        <script>
+            var canvas = document.getElementById('myCanvas');
+            var context = canvas.getContext('2d');
+
+            function draw() {
+                var x1 = document.getElementById("x1").value;
+                var x2 = document.getElementById("x2").value;
+                var x3 = document.getElementById("x3").value;
+                var x4 = document.getElementById("x4").value;
+                var x5 = document.getElementById("x5").value;
+                var x6 = document.getElementById("x6").value;
+                var x7 = document.getElementById("x7").value;
+                var x8 = document.getElementById("x8").value;
+                var x9 = document.getElementById("x9").value;
+                var x10 = document.getElementById("x10").value;
+                var x11 = document.getElementById("x11").value;
+                var y1 = document.getElementById("y1").value;
+                var y2 = document.getElementById("y2").value;
+                var y3 = document.getElementById("y3").value;
+                var y4 = document.getElementById("y4").value;
+                var y5 = document.getElementById("y5").value;
+                var y6 = document.getElementById("y6").value;
+                var y7 = document.getElementById("y7").value;
+                var y8 = document.getElementById("y8").value;
+                var y9 = document.getElementById("y9").value;
+                var y10 = document.getElementById("y10").value;
+                var y11 = document.getElementById("y11").value;
+
+                context.beginPath();
+                context.textAlign = "center 20,10";
+                context.strokeStyle = "red";
+                context.moveTo(x1, y1);
+                context.lineTo(x2, y2);
+                context.lineTo(x3, y3);
+                context.lineTo(x4, y4);
+                context.lineTo(x5, y5);
+                context.lineTo(x6, y6);
+                context.lineTo(x7, y7);
+                context.lineTo(x8, y8);
+                context.lineTo(x9, y9);
+                context.lineTo(x10, y10);
+                context.lineTo(x11, y11);
+                context.stroke();
+            }
+
+        </script>
+    
+</body>
+
+</html>
